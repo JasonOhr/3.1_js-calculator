@@ -9,9 +9,22 @@
     //var expression = 0;
     //var operator = "";
     //var nextNumber = 0;
-    function arrayContainsOperator(operatorArrayToCheck, operator, arrayToCalculate, index){
+    console.log(array);
+    function doMultiplication(arrayToCheck){
+
+        for (var i = 0; i < arrayToCheck.length; i++) {
+            if (arrayContainsOperator("x", arrayToCheck, i)){
+                // what
+            }
+
+
+
+        }
+    }
+
+    function arrayContainsOperator(operator, arrayToCalculate, index){
         var newNumber = 0;
-        if (operatorArrayToCheck.indexOf(operator) >= 0){
+        if (operator){
             switch (operator){
                 case "x":
 
@@ -25,13 +38,16 @@
             console.log('not an operator:', operator)
         }
     }
-
-    for (var i = 0; i < array.length; i++) {
-        if (arrayContainsOperator(operatorArray, array[i], array, i)){
-            // what
-        }
-
-
-
-    }
+    doMultiplication (array);
+    //for (var i = 0; i < array.length; i++) {
+    //    if (arrayContainsOperator(operatorArray, array[i], array, i)){
+    //        // what
+    //    }
+    //
+    //
+    //
+    //}
 }) ();
+
+//arrayToCheck is the array with the operators in it
+
