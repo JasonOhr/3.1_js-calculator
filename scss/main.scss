@@ -1,0 +1,129 @@
+$gutter: 0em;
+$grid-columns: 4;
+
+@import "../bower_components/bourbon/app/assets/stylesheets/bourbon";
+@import '../bower_components/neat/app/assets/stylesheets/neat';
+
+@import "variables";
+
+
+body {
+  @include outer-container(232px);
+  @include font;
+}
+
+button {
+  @include span-columns(1);
+  //@include omega(3);
+  padding: 0;
+  margin: 0;
+  @include border();
+}
+button:active {
+  background-color: $dark-color;
+}
+button:focus {
+  outline-style: none;
+}
+.display {
+  @include span-columns(4);
+
+  background-color: $display-background;
+  color: $display-output;
+  border-radius: 5px 5px 0 0;
+  height: 80px;
+}
+ul {
+  padding: 0;
+  margin: -2px 0 0 9px;
+}
+li {
+  display: inline-block;
+  height: 12px;
+  width: 12px;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+
+}
+.close {
+  background-color: rgba(226, 78, 81, 1);
+}
+.minimize {
+  background-color: rgba(239, 191, 58, 1);
+}
+.maximize {
+  background-color: rgba(108, 205, 63, 1);
+}
+#answer {
+  padding-right: 20px;
+  font-size: 49px;
+  text-align: right;
+}
+.number,
+.special,
+.operator,
+.clear-btn,
+.equal,
+.decimal
+{
+  //width: 56px;
+  height: 48px;
+
+}
+.number,
+.number-zero,
+.decimal{
+  background-color: $number-background-color;
+  color: $number-color;
+}
+.special,
+.clear-btn{
+  background-color: $special-background-color;
+  color: $special-color;
+}
+.operator,
+.equal{
+  background-color: $operand-background-color;
+  color: $operand-color;
+}
+.clear-btn {
+  text-transform: uppercase;
+  font-size: .8em;
+}
+.zero {
+  @include span-columns(2);
+  height: 48px;
+  border-width: 1px 1px 0 0;
+  -webkit-border-radius: 0 0 0 5px;
+  -moz-border-radius: 0 0 0 5px;
+  border-radius: 0 0 0 5px;
+  text-align: left;
+  padding-left: 22px;
+
+
+}
+button:nth-child(4n+1){
+  border-right: 1px solid $gray-1;
+
+}
+button:nth-child(4n - 2){
+  border-left: 1px solid $gray-1;
+
+}
+button:nth-last-child(-n + 3){
+  border-bottom: 1px solid $gray-1;
+}
+button:nth-child(-n+4){
+  border-top: none;
+}
+button:last-child{
+  border-right: 1px solid $gray-1;
+}
+
+
+.equal {
+  -webkit-border-radius: 0 0 5px 0;
+  -moz-border-radius: 0 0 5px 0;
+  border-radius: 0 0 5px 0;
+}

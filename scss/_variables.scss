@@ -1,0 +1,44 @@
+$white: rgba(255, 255, 255, 1);
+$light-color: rgba(224, 224, 224, 1);//num buttons
+$light-gray:rgba(214, 214, 214, 1);//special buttons
+$gray-1: rgba(142, 142, 142, 1);//border
+$dark-color: rgba(76, 76, 76, 1);//num colors
+
+$orange-color: rgba(233, 148, 58, 1);
+$dark-color-2: rgba(4, 4, 4, 1);
+
+
+//numbers
+$number-background-color: $light-color;
+$number-color: $dark-color-2;
+
+//special buttons
+$special-background-color: $light-gray;
+$special-color: $dark-color-2;
+
+//operands
+$operand-background-color: $orange-color;
+$operand-color: $white;
+
+//display
+$display-background: $dark-color;
+$display-output: $white;
+
+//general button
+$button-border: $gray-1;
+//nav buttons
+
+
+
+@mixin border {
+  border-width: 1px 1px 0 0;
+  border-style: solid;
+
+  border-color:$gray-1;
+}
+@mixin font {
+  font-family: "Helvetica";
+  font-size: 1.4em;
+  font-weight: 100;
+}
+
